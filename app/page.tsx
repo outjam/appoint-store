@@ -12,20 +12,49 @@ export default async function Home() {
 
   // ✅ iOS → моментальный редирект
   if (isIOS) {
-    redirect("https://apps.apple.com/app/idXXXXXXX");
+    redirect("https://testflight.apple.com/join/GByGCQ6K");
   }
 
   // ✅ Android → показываем 2 кнопки
   if (isAndroid) {
     return (
-      <div>
-        <a href="https://play.google.com/store/apps/details?id=xxx">
-          <button>Google Play</button>
+      <div className='home'>
+
+      <img className='logo' src="/logo.svg" alt="appoint" />
+
+      <div className='store'>
+        {/* AppStore */}
+        <a href="https://testflight.apple.com/join/GByGCQ6K">
+          <button className='button'>
+            <img className='buttonIcon' src={'/appstore.svg'} />
+            <div className='buttonDitail'>
+              <p className='buttonCaption'>Загрузить в</p>
+              <p className='buttonText'>App Store</p>
+            </div>
+          </button>
         </a>
-        <a href="https://apps.rustore.ru/app/xxx">
-          <button>RuStore</button>
+        {/* Google Play */}
+        <a href="https://play.google.com/store/apps/details?id=xxx">
+          <button className='button'>
+            <img className='buttonIcon' src={'/googleplay.svg'} />
+            <div className='buttonDitail'>
+              <p className='buttonCaption'>Скачать из</p>
+              <p className='buttonText'>Google Play</p>
+            </div>
+          </button>
+        </a>
+        {/* RuStore */}
+        <a href="https://www.rustore.ru/catalog/app/com.familyfit.app">
+          <button className='button'>
+            <img className='buttonIcon' src={'/rustore.svg'} />
+            <div className='buttonDitail'>
+              <p className='buttonCaption'>Скачать из</p>
+              <p className='buttonText'>RuStore</p>
+            </div>
+          </button>
         </a>
       </div>
+    </div>
     );
   }
 
@@ -33,15 +62,40 @@ export default async function Home() {
   return (
     <div className='home'>
 
-      <a href="https://apps.apple.com/app/idXXXXXXX">
-        <button>App Store</button>
-      </a>
-      <a href="https://play.google.com/store/apps/details?id=xxx">
-        <button>Google Play</button>
-      </a>
-      <a href="https://apps.rustore.ru/app/xxx">
-        <button>RuStore</button>
-      </a>
+      <img className='logo' src="/logo.svg" alt="appoint" />
+
+      <div className='store'>
+        {/* AppStore */}
+        <a href="https://testflight.apple.com/join/GByGCQ6K">
+          <button className='button'>
+            <img className='buttonIcon' src={'/appstore.svg'} />
+            <div className='buttonDitail'>
+              <p className='buttonCaption'>Загрузить в</p>
+              <p className='buttonText'>App Store</p>
+            </div>
+          </button>
+        </a>
+        {/* Google Play */}
+        <a href="https://play.google.com/store/apps/details?id=xxx">
+          <button className='button'>
+            <img className='buttonIcon' src={'/googleplay.svg'} />
+            <div className='buttonDitail'>
+              <p className='buttonCaption'>Скачать из</p>
+              <p className='buttonText'>Google Play</p>
+            </div>
+          </button>
+        </a>
+        {/* RuStore */}
+        <a href="https://www.rustore.ru/catalog/app/com.familyfit.app">
+          <button className='button'>
+            <img className='buttonIcon' src={'/rustore.svg'} />
+            <div className='buttonDitail'>
+              <p className='buttonCaption'>Скачать из</p>
+              <p className='buttonText'>RuStore</p>
+            </div>
+          </button>
+        </a>
+      </div>
     </div>
   );
 }
