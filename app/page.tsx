@@ -1,8 +1,5 @@
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import ReactDOM from 'react-dom'
-import Snowfall from 'react-snowfall'
-import Snow from "./Snowfall";
 
 export default async function Home() {
   const ua = (await headers()).get("user-agent") || "";
@@ -47,7 +44,6 @@ export default async function Home() {
 
   return (
     <div className="home">
-      {/* <Snow /> */}
 
       <img className="logo" src="/logo.svg" alt="appoint" />
 
