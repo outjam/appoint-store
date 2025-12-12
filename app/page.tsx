@@ -47,7 +47,7 @@ export default async function Home() {
 
   return (
     <div className="home">
-      <Snow />
+      {/* <Snow /> */}
 
       <img className="logo" src="/logo.svg" alt="appoint" />
 
