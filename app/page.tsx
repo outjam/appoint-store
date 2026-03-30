@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import ReactDOM from 'react-dom'
 import Snowfall from 'react-snowfall'
 import Snow from "./Snowfall";
+import Link from "next/link";
 
 export default async function Home() {
   const ua = (await headers()).get("user-agent") || "";
@@ -48,7 +49,9 @@ export default async function Home() {
   return (
     <div className="home">
 
-      <img className="logo" src="/logo.svg" alt="appoint" />
+      <Link className="logo" href="https://appoint.ru" target="_blank">
+        <img  src="/logo.svg" alt="appoint" />
+      </Link>
 
       <div className="store">
         {visibleStores.map((store) => (
